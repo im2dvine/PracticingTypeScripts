@@ -1,0 +1,19 @@
+.dice {
+    width: auto;
+    height: auto;
+    float: left;
+    font-size: 10em;
+    color: black;
+    flex-wrap: wrap;
+  };
+
+  body {
+    display: center;
+
+  }
+
+  button {
+      border-radius: 10px;
+      margin: auto;
+  }
+
