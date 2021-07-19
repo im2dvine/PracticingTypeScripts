@@ -1,20 +1,30 @@
+import $ from "jquery";
+
 let diceContainer = $("#die-container");
-let dieArray = [];
+let dieArray: any[] = [];
 let idNumber = 0;
 
 class Die {
-    constructor() {
-        this.value;
+    value: number;
+    div: JQuery<HTMLElement>;
+    id: any;
+    h1: JQuery<HTMLElement>;
+    unicode: any;
+    
+    
+
+    constructor(value: number) {
+        this.value = value;
         this.roll();
         this.div = $("<div class=dice></div>");
         this.h1 = $("<h1></h1>");
         this.id = idNumber;
         this.div.attr("id", this.id);
-        this.div.append(this.dieFace());
+        this.div.append(this.dieFace(this.unicode));
         diceContainer.append(this.div);
         this.div.click(() => {
             this.roll();
-            this.div.empty().html(this.dieFace());
+            this.div.empty().html(this.dieFace(this.unicode));
         })
         this.div.dblclick(() => {
             this.removeDie();
@@ -31,7 +41,7 @@ class Die {
         dieArray.splice(index, 1);
     }
 
-    dieFace(unicode) {
+    dieFace(unicode: any){
         if (this.value === 1) {
             unicode = '&#9856;';
             return unicode;

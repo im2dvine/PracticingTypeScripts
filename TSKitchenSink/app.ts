@@ -12,7 +12,7 @@ function sayHello() {
 
 sayHello();
 
-function checkAge(name, age) {
+function checkAge(name: string, age: number) {
     if (age < 21) {
         alert("Sorry " + name + ", you aren't old enough to view this page!");
     }
@@ -69,7 +69,7 @@ for (let i = 0; i < humans.length; i++) {
 
 
 
-function getLength(str) {
+function getLength(str: string) {
     return str.length;
 }
 

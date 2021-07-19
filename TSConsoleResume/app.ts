@@ -1,3 +1,5 @@
+export {}
+
 let name = "Daesy";
 let allCapsName = name.toUpperCase();
 console.log("Name: " + allCapsName);
@@ -13,7 +15,7 @@ let interests = ["Art", "Cooking", "Space", "Mother Earth", "Physics"];
 console.log("\nMy Interests:");
 
 
-function displayInterests(str) {
+function displayInterests(str: string) {
     console.log("* " + str);
 }
 displayInterests("Art");
@@ -31,7 +33,7 @@ let positions = [
 console.log("\nMy Previous Experience: ");
 
 
-function displayPosition(companyName, jobTitle, jobDescription) {
+function displayPosition(companyName: string, jobTitle: string, jobDescription: string) {
     console.log("* " + jobTitle + " at " + companyName + " - " + jobDescription);
 }
 
@@ -46,7 +48,7 @@ console.log("\nMy Skills: ");
 
 
 
-function displaySkill(mySkill, bam) {
+function displaySkill(mySkill: string, bam: boolean) {
     if (bam == true) { 
         console.log("*  BAM: " + mySkill);
     } else if (bam == false) {
